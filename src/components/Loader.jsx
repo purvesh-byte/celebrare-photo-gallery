@@ -2,15 +2,14 @@ import React from 'react';
 
 const Loader = () => {
   return (
-    <div className="flex justify-center items-center h-full my-8">
-      <div
-        className="inline-block h-12 w-12 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-indigo-500 motion-reduce:animate-[spin_1.5s_linear_infinite]"
-        role="status">
-        <span
-          className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-          >Loading...</span
-        >
+    <div className="flex flex-col justify-center items-center py-28" role="status" aria-live="polite">
+      <div className="relative">
+        <div className="h-9 w-9 rounded-full border-2 border-[#E7E3DA]" />
+        <div className="h-9 w-9 rounded-full border-2 border-transparent border-t-[#75866A] animate-spin absolute top-0 left-0" />
       </div>
+      <p className="mt-4 text-xs font-medium tracking-[0.18em] uppercase text-[#77766F]">
+        Loading photographs...
+      </p>
     </div>
   );
 };
